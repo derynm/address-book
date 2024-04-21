@@ -29,6 +29,21 @@ function saveContact(e) {
   renderContactCard()
 }
 
+const searchContactForm = document.getElementById('search-form')
+
+searchContactForm.addEventListener('submit', searchContact)
+
+
+function searchContact(e) {
+  e.preventDefault()
+  const searchValue = document.getElementById('search-value').value
+  renderContactCard(
+    getContactFromStorage().filter((contact) =>
+      contact.name.toLowerCase().includes(searchValue.toLowerCase())
+    )
+  )
+}
+
 function renderContactCard(data) {
   const contact = data ?? getContactFromStorage()
   const contactCard = document.getElementById('contact-container')
