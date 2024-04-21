@@ -31,6 +31,7 @@ function saveContact(e) {
 
   saveContactToStorage(contact)
   renderContactCard()
+  addContactForm.reset()
 }
 
 const searchContactForm = document.getElementById('search-form')
