@@ -38,7 +38,6 @@ const searchContactForm = document.getElementById('search-form')
 
 searchContactForm.addEventListener('submit', searchContact)
 
-
 function searchContact(e) {
   e.preventDefault()
   const searchValue = document.getElementById('search-value').value
