@@ -6,7 +6,11 @@ function saveContactToStorage(contact) {
   localStorage.setItem('contact', JSON.stringify(contact))
 }
 
-window.addEventListener('load', renderContactCard())
+window.addEventListener('load', function () {
+  if (getContactFromStorage()) {
+    renderContactCard()
+  }
+})
 
 const addContactForm = document.getElementById('add-contact-form')
 
