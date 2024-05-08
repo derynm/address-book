@@ -29,60 +29,12 @@
         </form>
       </section>
 
-      <section>
-        <form id="add-contact-form" class="space-y-2">
-          <div class="flex flex-col">
-            <label for="name" class="font-semibold">Name</label>
-            <input
-              type="text"
-              class="p-2 rounded-md border border-slate-300"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-          <div class="flex flex-col">
-            <label for="phone" class="font-semibold">Phone</label>
-            <input
-              type="tel"
-              class="p-2 rounded-md border border-slate-300"
-              id="phone"
-              name="phone"
-              required
-            />
-          </div>
-          <div class="flex flex-col">
-            <label for="email" class="font-semibold">Email</label>
-            <input
-              type="email"
-              class="p-2 rounded-md border border-slate-300"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="flex flex-col">
-            <label for="address" class="font-semibold">Address</label>
-            <input
-              type="text"
-              class="p-2 rounded-md border border-slate-300"
-              id="address"
-              name="address"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            class="bg-slate-500 p-2 rounded-md text-white hover:bg-slate-600 w-full"
-          >
-            Add Contact
-          </button>
-        </form>
-      </section>
+      <section id="form-container"></section>
 
       <section id="contact-container" class="space-y-2 mt-5"></section>
 
       <script src="index.js"></script>
+      <script src="render.js"></script>
     </main>
   </body>
 </html>
