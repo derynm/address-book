@@ -1,5 +1,6 @@
 function getContactFromStorage() {
-  return JSON.parse(localStorage.getItem('contact'));
+  const storage = localStorage.getItem('contact');
+  return JSON.parse(storage) || saveContactToStorage([]);
 }
 
 function getContactByIdFromStorage() {
