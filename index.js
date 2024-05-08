@@ -12,26 +12,22 @@ window.addEventListener('load', function () {
   }
 })
 
-const addContactForm = document.getElementById('add-contact-form')
+const contactForm = document.getElementById('add-contact-form')
 
-addContactForm.addEventListener('submit', saveContact)
+contactForm.addEventListener('submit', saveContact)
 
 function saveContact(e) {
   e.preventDefault()
   const currentContact = getContactFromStorage()
-  const newContact = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    address: document.getElementById('address').value,
-  }
+  const contactFormData = new FormData(contactForm) 
+  const newContact = Object.fromEntries(contactFormData)
   const contact = currentContact
     ? [...currentContact, newContact]
     : [newContact]
 
   saveContactToStorage(contact)
   renderContactCard()
-  addContactForm.reset()
+  contactForm.reset()
 }
 
 const searchContactForm = document.getElementById('search-form')
